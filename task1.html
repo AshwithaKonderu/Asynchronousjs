@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #button{
+            padding:10px;
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+    <p id="para"></p>
+    <button id="button">click Me</button>
+
+    <script>
+//         1.task is to create an remainder of water for every hour by using set 
+// timeout
+setInterval(()=>{
+   
+    console.log("its time to drink water")
+    },7200000);
+
+
+    
+
+    // 2.create a stopwatch based on set interval
+
+     count=0
+   let stop_watch= setInterval(()=>{
+        count++
+        console.log(count)
+        let p_ele=document.getElementById("para")
+        p_ele.innerText=count
+          p_ele.style = "font-size:100px"
+    },1000)
+    setTimeout(()=>{
+       let btn=document.getElementById("button")
+       btn.addEventListener("click",()=>{
+        clearInterval(stop_watch)
+       })
+    })
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
